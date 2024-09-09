@@ -1,36 +1,122 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>CRUD Operations</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div id="container">
-      <h1>CRUD Operations</h1>
-      <div id="input-container">
-        <input type="text" id="name-input" placeholder="Enter name">
-        <input type="email" id="email-input" placeholder="Enter email">
-        <button id="add-btn">Add</button>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-      </table>
-      <div id="update-container">
-        <input type="text" id="update-name-input">
-        <input type="text" id="update-email-input">
-        <button id="update-btn">Update</button>
-        <button id="cancel-btn">Cancel</button>
-      </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 60px; /* Adjust for header height */
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: calc(33% - 60px); /* Three cards per row */
+            vertical-align: top;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .footer {
+            background: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 40px); /* Two cards per row on smaller screens */
+            }
+        }
+        @media (max-width: 480px) {
+            .card {
+                width: 100%; /* One card per row on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Pricing</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to Cloud Service</h1>
+            <p>We offer a range of cloud services to help you scale your business efficiently.</p>
+            
+            <div class="card">
+                <h3>Cloud Storage</h3>
+                <p>Store and manage your data securely with our scalable cloud storage solutions.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Virtual Machines</h3>
+                <p>Deploy virtual machines on demand with high availability and performance.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Cloud Security</h3>
+                <p>Protect your data and applications with our robust cloud security measures.</p>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+    
+    <footer class="footer">
+        <p>&copy; 2024 Cloud Service. All rights reserved.</p>
+    </footer>
+</body>
 </html>
